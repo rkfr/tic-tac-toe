@@ -1,0 +1,54 @@
+body {
+    min-height: 100vh;
+}
+
+.game-field {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    width: min-content;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.game-cell {
+    border: 1px solid black;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.game-cell.cross {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/ca/Transparent_X.png");
+}
+
+.game-cell.zero {
+    background-image: url("https://cutewallpaper.org/24/o-png/letter-o-png.png");
+}
+
+.game-cell.is-winning {
+    background-color: rebeccapurple;
+}
+
+.notifications-container {
+    display: block;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 6px;
+}
+
+.notification {
+    padding: 12px 20px;
+    border-radius: 20px;
+}
+
+.notification.warn {
+    background-color: lavenderblush;
+    color: brown;
+}
+
+.notification.success {
+    background-color: cadetblue;
+    color: lightgoldenrodyellow;
+}
